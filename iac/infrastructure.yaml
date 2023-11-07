@@ -1,0 +1,10 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: WASM infrastructure resources
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  # ECR
+  Repository:
+    Type: AWS::ECR::Repository
+Outputs:
+  outRepository:
+    Value: !Ref Repository

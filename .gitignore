@@ -3,4 +3,6 @@
 target/
 
 # files
+etc/*.sh
+iac/*_output.yaml
 notes.md
