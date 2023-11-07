@@ -1,0 +1,16 @@
+PROFILE=your-cli-profile
+REGION=us-east-1
+BUCKET=your-deployment-bucket
+ACCOUNTID=your-account-id
+
+INFRASTRUCTURE_STACK=wasm-infrastructure
+INFRASTRUCTURE_TEMPLATE=iac/infrastructure.yaml
+INFRASTRUCTURE_OUTPUT=iac/infrastructure_output.yaml
+INFRASTRUCTURE_PARAMS="ParameterKey=name,ParameterValue=placeholder"
+O_ECR_REPO=output-ecr-repository-name
+
+C_REPO_BASE=${ACCOUNTID}.dkr.ecr.${REGION}.amazonaws.com
+C_REPO_IMAGE=${O_ECR_REPO}
+C_VERSION=1
+C_TAG=${C_REPO_IMAGE}:${C_VERSION}
+C_REPO_URI=${C_REPO_BASE}/${C_REPO_IMAGE}:${C_VERSION}
