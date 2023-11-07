@@ -1,0 +1,6 @@
+# directories
+.spin/
+target/
+
+# files
+notes.md
